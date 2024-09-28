@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 55b32387b9f10804fa5f993333f57993
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - tilemap: {instanceID: 0}
+  - aliveTile: {fileID: 11400000, guid: cc7cfdb9fd27f334b8ecb394ee76e5ab, type: 2}
+  - deadTile: {fileID: 11400000, guid: c0d8ae572182b2d478329b8a247f80d4, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

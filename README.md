@@ -8,4 +8,4 @@ Conway's Game of Life is a cellular automaton created by mathematician John Conw
 
 ___________________________________________  
 
-This project implements Conway's Game of Life in Unity using a tilemap to represent the grid. The initial configuration is random for now.
+This project implements Conway's Game of Life in Unity using a tilemap to represent the grid. The initial configuration can be set by the user.

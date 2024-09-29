@@ -11,21 +11,27 @@ public class GameOfLifeScript : MonoBehaviour
     public AnimatedTile aliveTile;
     public AnimatedTile deadTile;
 
-    private int[,] grid;
+    public int[,] grid;
     public int rows = 25;
     public int columns = 25;
 
+    public bool isSimulating;
+
+
+    void Awake() {
+        isSimulating = false;
+        grid = new int[rows, columns];
+    }
 
     void Start()
     {
-        grid = new int[rows, columns];
         InitializeGrid();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Time.time % 0.5 <  Time.deltaTime) {
+        if(isSimulating && Time.time % 0.5 <  Time.deltaTime) {
             CreateNextGeneration();
             UpdateTileMap();
         }
@@ -35,13 +41,8 @@ public class GameOfLifeScript : MonoBehaviour
         for(int i = 0; i < rows; ++i) {
             for(int j = 0; j < columns; ++j) {
                 Vector3Int tilePosition = new(i, j, 0);
-                grid[i,j] = Random.Range(0,2);
-                if(grid[i,j] == 0) {
-                    tilemap.SetTile(tilePosition, deadTile);
-                }
-                else {
-                    tilemap.SetTile(tilePosition, aliveTile);
-                }                
+                grid[i,j] = 0;
+                tilemap.SetTile(tilePosition, deadTile);             
             }
         }
     }
@@ -112,5 +113,17 @@ public class GameOfLifeScript : MonoBehaviour
             }
         }
         return count;
+    }
+
+    public void StartSimulation() {
+        isSimulating = true;
+    }
+    public void StopSimulation() {
+        isSimulating = false;
+    }
+    public void ResetGrid()
+    {
+        InitializeGrid(); 
+        UpdateTileMap();
     }
 }

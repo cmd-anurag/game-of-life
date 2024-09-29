@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DeadTile
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: 21300000, guid: fafe1d9d8872e424eb8444cf7db69e57, type: 3}
+  - {fileID: 21300000, guid: 024dfed55aa0ec84a896d1f5b4df6bfa, type: 3}
   m_MinSpeed: 1
   m_MaxSpeed: 1
   m_AnimationStartTime: 0
